@@ -1,0 +1,123 @@
+.plan
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.plansBox
+    width: 100%
+    height: auto
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    margin-top: 8%
+    gap: 3%
+    // margin-bottom: 5%
+
+.plans
+    width: 100%
+    height: 170px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 25%
+    border: 1px solid hsl(229, 24%, 87%)
+    border-radius: 15px
+    &:hover
+        border: 1px solid hsl(243, 100%, 62%)
+        cursor: pointer
+
+.imgPlan
+    padding-top: 15%
+    padding-left: 10%
+
+.plansActive
+    width: 100%
+    height: 170px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 25%
+    border: 1px solid hsl(243, 100%, 62%)
+    border-radius: 15px
+    background-color: hsl(217, 100%, 97%)
+    cursor: pointer
+
+.spanPlan
+    color: hsl(215, 88%, 27%)
+    font-weight: bolder
+    font-size: 19px
+
+.spanPlanPrix
+    color: hsl(231, 11%, 63%)
+    font-weight: 500
+
+.planDiv
+    display: flex
+    flex-direction: column
+    padding-left: 10%
+
+.btnToggle
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-around
+    height: 60px
+    background-color: hsl(217, 100%, 97%)
+    margin-bottom: 10%
+    margin-top: 5%
+
+.switch input 
+    opacity: 0
+
+.slider 
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: hsl(215, 88%, 27%)
+    transition: .4s
+    border-radius: 34px
+
+
+.slider:before
+    position: absolute
+    content: ""
+    height: 17px
+    width: 17px
+    left: 4px
+    bottom: 3.5px
+    background-color: white
+    transition: .4s
+    border-radius: 50%
+    
+.switch 
+    position: relative
+    display: inline-block
+    width: 50px
+    height: 24px
+
+
+input:checked + .slider
+    background-color: hsl(215, 88%, 27%)
+
+
+input:focus + .slider
+    box-shadow: 0 0 1px hsl(215, 88%, 27%)
+
+
+input:checked + .slider:before 
+    transform: translateX(25px)
+
+.switchSpanActive
+    color: hsl(215, 88%, 27%)
+    font-weight: bolder
+    font-size: 18px
+
+.switchSpan
+    color: hsl(231, 11%, 63%)
+    font-weight: bolder
+    font-size: 18px
+

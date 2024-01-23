@@ -1,0 +1,52 @@
+.addon
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 100%
+    height: 100%
+
+.addonBox
+    display: flex
+    height: 80px
+    width: 100%
+    border: 1px solid hsl(229, 24%, 87%)
+    border-radius: 10px
+    align-items: center
+    justify-content: space-around
+    &:hover
+        border: 1px solid hsl(267, 44%, 48%)
+        cursor: pointer
+
+.addonBoxActive
+    display: flex
+    height: 80px
+    width: 100%
+    border: 1px solid hsl(267, 44%, 48%)
+    border-radius: 10px
+    align-items: center
+    justify-content: space-around
+    background-color: hsl(217, 100%, 97%)
+    cursor: pointer
+
+.h2
+    font-size: 20px
+    color: hsl(213, 96%, 18%)
+
+.addonBody
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+.addonText
+    width: 70%
+
+.span
+    color: hsl(267, 44%, 48%)
+    font-weight: 500
+
+input[type="checkbox"]:checked
+    accent-color: purple
+
+input[type="checkbox"]
+    cursor: pointer
+    

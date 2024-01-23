@@ -1,0 +1,66 @@
+.sidebar
+    position: relative
+    width: 25%
+    height: 95%
+    display: flex
+    z-index: 1
+    margin-left: 2%
+
+
+#sidebarBg
+    position: absolute
+    z-index: -1
+    top: 0 
+    left: 0
+
+.steps
+    display: flex
+    align-items: center
+    color: white
+    width: 70%
+    gap: 10%
+    & h2
+        font-size: 15px
+        font-weight: 700
+    & h4
+        font-size: 12px
+        color: hsl(229, 24%, 87%)
+        font-weight: 500
+
+.sidebarContent
+    display: flex
+    width: 100%
+    align-items: center
+    flex-direction: column
+    gap: 5%
+    margin-top: 20%
+
+
+.stepSpan
+    font-size: 20px
+    font-weight: 700
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    border: 1px solid white
+    background-color: transparent
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+.stepSpanActive
+    background-color: hsl(206, 87%, 85%)
+    color: hsl(213, 96%, 18%)
+    font-size: 20px
+    font-weight: 700
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    border: 1px solid hsl(213, 96%, 18%)
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: all 0.5s
+
+
