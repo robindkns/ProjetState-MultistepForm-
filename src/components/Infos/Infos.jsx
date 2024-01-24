@@ -20,7 +20,7 @@ export default function Infos(props) {
                 </div>
             </form>
             <div className='divBtnHome'>
-                <button className='btnStep' onClick={() => props.changeNav(1)}>Next Step</button>
+                <button className='btnStep' onClick={props.name === '' || props.email === '' || props.phone === '' ? null : () => props.changeNav(1)}>Next Step</button>
             </div>
         </div>
     );

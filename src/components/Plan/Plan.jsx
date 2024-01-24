@@ -1,5 +1,7 @@
 import './Plan.sass';
 export default function Plan(props) {
+
+    // const [checked, setChecked] = useState(false)
     
     return (
         <div className="plan">
@@ -19,13 +21,13 @@ export default function Plan(props) {
             <div className='btnToggle'>
                 <span className={props.switch === false ? 'switchSpanActive' : 'switchSpan'}>Monthly</span>
                 <label className="switch">
-                    <input type="checkbox"/>
+                    <input type="checkbox" checked={props.switch} />
                     <span onClick={props.change} className="slider round"></span>
                 </label>
                 <span className={props.switch === true ? 'switchSpanActive' : 'switchSpan'}>Yearly</span>
             </div>
             <div className='divBtn'>
-                <button className='btnBack' onClick={() => props.changeNav(0)}>Go Back</button><button className='btnStep' onClick={() => props.changeNav(2)}>Next Step</button>
+                <button className='btnBack' onClick={() => props.changeNav(0)}>Go Back</button><button className='btnStep' onClick={props.tabPlan.length === 0 ? console.log("Vide") : () => props.changeNav(2)}>Next Step</button>
             </div>
         </div>
     )

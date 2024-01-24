@@ -20,7 +20,7 @@ export default function Addon(props) {
                 ))}
             </div>
             <div className='divBtn'>
-                <button className='btnBack' onClick={() => props.changeNav(1)}>Go Back</button><button className='btnStep' onClick={() => props.changeNav(3)}>Next Step</button>
+                <button className='btnBack' onClick={() => props.changeNav(1)}>Go Back</button><button className='btnStep' onClick={() => props.lastNav()}>Next Step</button>
             </div>
         </div>
     )
