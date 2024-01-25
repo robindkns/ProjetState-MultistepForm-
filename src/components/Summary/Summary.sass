@@ -62,13 +62,68 @@
 .summaryTotal
     width: 100%
     display: flex
+    align-items: center
+    flex-direction: column
+
+.pPromo
+    margin: 0
+    // width: 40%
+    // width: 100%
+    color: hsl(243, 100%, 62%)
+    font-size: 14px
+
+.spanPromo
+    color: #45c643
+    font-size: 25px
+    font-weight: bolder
+
+
+.bonusPromo 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 85%
+
+.promo
+    width: 40%
+    display: flex
+    flex-direction: column
+    gap: 10px
+    & button 
+        padding: 0
+
+.confirmPromo
+    width: 40%
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    gap: 10px
     justify-content: center
+
+.inputPromo
+    height: 30px
+    background-color: hsl(220, 60%, 98%)
+    border: 1px solid hsl(231, 100%, 99%)
+    font-family: 'Ubuntu', sans-serif
 
 .summaryTotalContent
     width: 85%
     justify-content: space-between
     display: flex
     align-items: center
+
+.btnPromo
+    background: transparent
+    border: none
+    font-family: 'Ubuntu', sans-serif
+    cursor: pointer
+    width: 40%
+    display: flex
+    font-size: 17px
+    font-weight: 500
+    color: hsl(214, 100%, 28%)
+    &:hover
+        color: hsl(243, 100%, 62%)
     
 .pTotal
     color: hsl(231, 11%, 63%)
@@ -115,3 +170,7 @@
     display: flex
     justify-content: space-between
     margin-bottom: 5%
+
+@media (max-width: 426px)
+    .summaryBody
+        margin-top: 2%

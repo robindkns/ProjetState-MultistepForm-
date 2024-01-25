@@ -1,7 +1,7 @@
 import "./Summary.sass";
 
 export default function Summary(props) {
-    
+
     return (
         <div className="summary">
             <div className="summaryHeader">
@@ -33,7 +33,17 @@ export default function Summary(props) {
                     <div className="summaryTotal">
                         <div className="summaryTotalContent">
                             <p className="pTotal">Total ({props.forfait === "mo" ? "per month" : "per year"})</p>
-                            <span className="spanTotal">${props.total}/{props.forfait}</span>
+                            <span className="spanTotal" style={props.btnPromo ? { textDecoration: "line-through" } : null}>${props.total}/{props.forfait}</span>
+                        </div>
+                        <div className="bonusPromo">
+                            <div className="promo">
+                                <input className="inputPromo" onKeyDown={(e) => e.key === "Enter" ? props.fctPromo(props.valPromo) : null} onChange={props.fctValInput} type="text" value={props.valPromo} placeholder="Use Promo Code" />
+                                <button className="btnPromo" onClick={() => props.fctPromo(props.valPromo)}>Apply</button>
+                            </div>
+                            <div className="confirmPromo">
+                                <p className="pPromo">{props.btnPromo ? `${props.promo}% OFF - ${props.discount}$` : null}</p>
+                                <span className="spanPromo">{props.btnPromo ? `${props.totalDiscount}$` : null}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
